@@ -34,7 +34,7 @@ def send_mail(time, temp, condition):
     server.starttls()
     server.ehlo()
 
-    server.login(""" Email address """, """ Temp password""")
+    server.login(""" Email address """, """ Temp password """)
 
     subject = 'It\'s a great day to go to the beach!'
     body = f'The weather in Half Moon Bay will be {condition} with a temperature of {temp} today at {time}. Get to the beach by then if you can!'
@@ -43,7 +43,7 @@ def send_mail(time, temp, condition):
 
     server.sendmail(
         """ Sender email """,
-        """ Recipient email""",
+        """ Recipient email """,
         message
     )
 
